@@ -52,8 +52,6 @@ class AudioBox(Frame):
         self.songList = [] # Item = (File name, File path)
 
     def play_song(self):
-        for (dirpath, dirnames, filenames) in os.walk(os.getcwd()):
-            print(filenames)
         if mixer.music.get_busy() == False:
             if self.listbox.curselection():
                 path = self.songList[self.listbox.curselection()[0]][1]
